@@ -124,8 +124,6 @@ unsigned int DJBHash(char* str, unsigned int len)
    return hash;
 }
 /* End Of DJB Hash Function */
-
-
 unsigned int DEKHash(char* str, unsigned int len)
 {
    unsigned int hash = len;

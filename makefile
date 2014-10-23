@@ -1,16 +1,11 @@
-all: strfind
-
-strfind: bloom.o main.o hash.o trie.o
-	cc -o strfind -Wall -pedantic bloom.o main.o hash.o trie.o
-
-bloom.o: bloom.c bloom.h hash.h
-	cc -o bloom.o -Wall -pedantic -ansi -c bloom.c
-
-main.o: main.c bloom.h
+all:strfind
+strfind: main.o bloom.o hash.o
+	cc -o strfind -Wall -pedantic hash.o bloom.o main.o
+main.o:main.c 
 	cc -o main.o -Wall -pedantic -ansi -c main.c
-
-hash.o: hash.c hash.h
+bloom.o:bloom.c bloom.h
+	cc -o bloom.o -Wall -pedantic -ansi -c bloom.c
+hash.o:hash.c hash.h
 	cc -o hash.o -Wall -pedantic -ansi -c hash.c
-
-trie.o: trie.c trie.h
-    cc -o trie.o -Wall -pedantic -ansi -c trie.c
+clean:
+	rm main.o bloom.o hash.o strfind

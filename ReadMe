@@ -1,0 +1,16 @@
+you can use make to compile the program
+
+
+make
+
+run:
+
+./strfind strpool.dat checkmail.dat
+
+find the result:
+
+checkmailresult.dat
+
+
+note：
+由于strpool.dat文件较大，故未在压缩包中，若需运行，请将strpool.dat放入bloomfilter文件夹中
